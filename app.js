@@ -17,6 +17,14 @@ const winningScoreSelect = document.querySelector('#winningScore')
 let isGameOver = false;
 let winningScore = 3;
 
+/*
+   update the score by 1 if not reach the winning score
+   the one whose score equals to the winning score is the winner, 
+   set the score color of winner to red
+   set the score color of the loser to blue
+   set the button to disable
+ */
+
 function updateScores(player, opponent) {
     if (!isGameOver) {
         player.score += 1;
@@ -46,6 +54,11 @@ winningScoreSelect.addEventListener('change', function () {
 })
 
 resetButton.addEventListener('click', reset)
+
+
+/*
+  set all the parameter to default value
+  */
 
 function reset() {
     isGameOver = false;
